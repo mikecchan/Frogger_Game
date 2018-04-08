@@ -2,7 +2,6 @@
 let canvas = document.getElementsByTagName('canvas');
 //let enemy_count = 5;
 let speed_array = [60,145,230];
-let player_speed = 50;
 
 let Enemy = function() {
     // Variables applied to each of our instances go here,
@@ -72,6 +71,7 @@ let Player = function(){
   //this.prototype = dimensions;
   this.width = 100;
   this.height = 70;
+  this.player_speed = 50;
 };
 
 Player.prototype.update = function(dt) {
@@ -86,13 +86,13 @@ Player.prototype.handleInput = function(key_pressed){
   console.log(key_pressed);
   switch(key_pressed) {
     case 'left':
-        this.x -= player_speed;
+        this.x -= this.player_speed;
         if (this.x <= 0){
             this.x = 0;
           }
         break;
     case 'up':
-        this.y -= player_speed;
+        this.y -= this.player_speed;
         if (this.y <= 40){
           this.x = 200;
           this.y = 375;
@@ -104,14 +104,14 @@ Player.prototype.handleInput = function(key_pressed){
         }
         break;
     case 'right':
-        this.x += player_speed;
+        this.x += this.player_speed;
         if (this.x >= 400){
             console.log("width");
             this.x = 400;
           }
         break;
     case 'down':
-        this.y += player_speed;
+        this.y += this.player_speed;
         if (this.y >= 450){
             console.log("height");
             this.y = 450;

@@ -15,3 +15,9 @@ Use the arrow keys to move the player.
 ## Begin Playing the Games
 
  https://mikecchan.github.io/Frogger_Game/
+
+## Setup and Play on Localhost
+
+1. Clone or download https://github.com/mikecchan/Frogger_Game.git to a place on your computer.
+2. Navigate to the index.html file and open that file up on a browser of your choice.
+3. Play
